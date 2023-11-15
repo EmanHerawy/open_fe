@@ -1,0 +1,33 @@
+struct OwnershipTransferred{
+      #indexed
+     pub previousOwner:address
+      #indexed
+    pub  newOwner:address
+}
+contract Ownable {
+     owner:address
+    pub fn _init_(mut self, ctx: Context){
+        self.owner = ctx.msg_sender()
+    }
+
+    pub fn  owner(self)->address{
+        return self.owner
+    }
+
+   
+
+    pub fn transfer_ownership(mut self,mut ctx: Context, _owner:address) ->bool {
+        if self.owner != ctx.msg_sender() {
+            return false
+        }
+        self.owner = _owner
+        ctx.emit(OwnershipTransferred(            previousOwner: ctx.msg_sender(),
+            newOwner: _owner
+        ))
+        return true
+    }
+
+
+   
+}
+
