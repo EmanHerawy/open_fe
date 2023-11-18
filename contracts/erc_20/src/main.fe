@@ -1,8 +1,8 @@
 
-use ownable::OwnershipTransferred
 use erc_20::Approval
 use erc_20::Transfer
 use erc_20::ERC20
+use erc_20::ERC20Contract
 
 
 
