@@ -1,0 +1,7 @@
+name = "erc_20"
+version = "1.0"
+
+[dependencies]
+ ownable = "../../libs/ownable"
+ erc_20 = "../../libs/erc_20"
+# my_lib = { path = "../my_lib", version = "1.0" }
