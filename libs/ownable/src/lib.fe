@@ -1,4 +1,4 @@
-struct OwnershipTransferred{
+pub struct OwnershipTransferred{
       #indexed
      pub previousOwner:address
       #indexed
