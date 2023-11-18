@@ -3,7 +3,7 @@
 
 // events go here
 
-     struct Approval {
+   pub  struct Approval {
         #indexed
        pub owner: address
         #indexed
